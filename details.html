@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Player Details - Sr Bird Official Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: 40px auto;
+            box-shadow: 0 0 10px #ff4500;
+        }
+        h1 {
+            text-align: center;
+            color: #ff4500;
+            margin-bottom: 20px;
+        }
+        .detail {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .label {
+            font-weight: bold;
+            color: #ff4500;
+        }
+        button {
+            display: block;
+            margin: 30px auto 0;
+            padding: 10px 20px;
+            background-color: #ff4500;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e03e00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Player and Team Details</h1>
+        <div class="detail"><span class="label">Player Name:</span> <span id="playerName"></span></div>
+        <div class="detail"><span class="label">Team Name:</span> <span id="teamName"></span></div>
+        <div class="detail"><span class="label">Email:</span> <span id="email"></span></div>
+        <div class="detail"><span class="label">Phone Number:</span> <span id="phone"></span></div>
+        <button id="backButton">Back to Registration</button>
+    </div>
+
+    <script>
+        // Load data from localStorage
+        const playerName = localStorage.getItem('playerName') || 'N/A';
+        const teamName = localStorage.getItem('teamName') || 'N/A';
+        const email = localStorage.getItem('email') || 'N/A';
+        const phone = localStorage.getItem('phone') || 'N/A';
+
+        document.getElementById('playerName').textContent = playerName;
+        document.getElementById('teamName').textContent = teamName;
+        document.getElementById('email').textContent = email;
+        document.getElementById('phone').textContent = phone;
+
+        // Back button to go back to registration page
+        document.getElementById('backButton').addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

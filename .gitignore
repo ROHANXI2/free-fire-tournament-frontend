@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# System files and folders to ignore
+AppData/
+Local/
+Temp/
+
+# Ignore environment files
+.env
+
+# Ignore build output
+dist/
+build/
